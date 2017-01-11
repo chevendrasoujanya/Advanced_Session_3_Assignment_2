@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advanced Concepts - Session 3 | Assignment 2</title>
+</head>
+<body>
+	<script>
+		//Map 
+		let myMap = new Map();
+		myMap.set('one', 1);
+		myMap.set('two', 2);
+		myMap.set('three', 3);
+		myMap.set({key: 'four'}, 4);
+		
+		//Getting a value with respect to the Key specified
+		console.log("First Retrieved Value: " + myMap.get('one'));
+
+		//Loop through all the values of Map
+		myMap.forEach(function(value, key) {
+			console.log(`My Key is ${key} -----> My Value is ${value}`);
+		})
+
+		//size of the Map
+		console.log("Size of the Map is: " + myMap.size);
+
+		//retrieving all the Keys from a Map
+		myMap.keys();
+
+		//retrieving all the values from a Map
+		myMap.values();
+
+		//Set
+		let mySet = new Set();
+		mySet.has(); //returns false as there are not elements in the set
+		mySet.add(1);
+		mySet.add('Soujanya');
+		mySet.add(true);
+		mySet.add({id: 101, name: 'Bangalore'});
+
+		//has() example
+		mySet.has('Soujanya');
+
+		//size of the set
+		console.log("Size of the set is: " + mySet.size);
+
+		//deleting a boolean value from the set
+		mySet.delete(true);
+		mySet.values();
+
+		//Loop through all the values of a Set
+		mySet.forEach(function(value) {
+			console.log(value);
+		})	
+
+		let myArray = ['john', 'smith', 'mac'];	
+		let myNewSet = new Set(myArray);
+		myNewSet.has('smith'); //returns true
+		myNewSet.has('Soujanya'); // returns false
+
+		myNewSet.forEach(function(value) {
+			console.log(value);
+		})
+
+
+	</script>
+</body>
+</html>
